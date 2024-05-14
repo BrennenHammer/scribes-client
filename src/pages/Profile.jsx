@@ -54,7 +54,7 @@ const Profile = () => {
 
     return (
         <div>
-            {user && <h2>Welcome {user.username}!</h2>}
+            {user && <h2> {user.username}!</h2>}
             <img className="profilep" src={user.profilePicture} alt={`${user.username}'s profile`} />
 
             <div className="user-bio">

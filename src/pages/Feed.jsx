@@ -52,8 +52,8 @@ function SkillsFeed() {
     }
   };
 
-  const isOwner = (pic, id) => {
-    return pic.author._id === id;
+  const isOwner = (post, userId) => {
+    return post.author && post.author._id === userId;
   };
 
   if (isLoading) {
@@ -65,31 +65,27 @@ function SkillsFeed() {
       <div className="skills-feed">
         {posts.map((post) => (
           <div key={post._id} className="post">
-
-            
-            {user && isOwner(post, user._id) &&
-            
-            
-            <button
-              className="delete-post-btn"
-              onClick={() => deletePost(post._id)}
-            >
-              X
-            </button>
-            
-            }
+            {user && isOwner(post, user._id) && (
+              <button
+                className="delete-post-btn"
+                onClick={() => deletePost(post._id)}
+              >
+                X
+              </button>
+            )}
             <div className="post-header">
-              <Link to={`/user-profile/${post.author._id}`}>
-                <img
-                  className="feedprofilep"
-                  src={post.author.profilePicture}
-                  alt={`${post.author.username}'s profile`}
-                  width="50"
-                  height="50"
-                />
-
-                <h3 className="feedpagename">{post.author.username}</h3>
-              </Link>
+              {post.author && (
+                <Link to={`/user-profile/${post.author._id}`}>
+                  <img
+                    className="feedprofilep"
+                    src={post.author.profilePicture}
+                    alt={`${post.author.username}'s profile`}
+                    width="50"
+                    height="50"
+                  />
+                  <h3 className="feedpagename">{post.author.username}</h3>
+                </Link>
+              )}
               <button
                 className="likebutton"
                 onClick={() => handleLike(post._id)}
@@ -102,7 +98,6 @@ function SkillsFeed() {
             ) : (
               <img src={post.mediaUrl} alt={post.caption} />
             )}
-
             <p className="postcaption">{post.caption}</p>
           </div>
         ))}
