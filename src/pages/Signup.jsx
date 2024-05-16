@@ -46,7 +46,7 @@ const Signup = () => {
 
   return (
     <div className="loginvw">
-    <> <p className="signupP">Do you have talent? Show the world!</p>
+    <> 
     <div className="Logindiv">
       {message && <p>{message}</p>} {}
 

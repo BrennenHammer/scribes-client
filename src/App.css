@@ -60,12 +60,19 @@
   left: 0;
   height: 100%;       
   width: 120px;       
-  background-color: #333;
+  background-color: #121010;
   padding: 10px 0;
   overflow-y: auto;
   z-index: 999;
 }
 
+.loginlogo{
+  border-radius: 45%;
+  height: 200px;
+  margin-left: 370px;
+  top: 30%;
+  position: absolute;
+}
 .navbar1 a {
   display: block;
   padding: 10px 15px;
@@ -127,7 +134,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-
+  
 }
 
 .skills-feed{
@@ -153,7 +160,7 @@ z-index: 1;
 
 }
 .feedpara{
-  margin-top: -140px;
+  margin-top: -200px;
 }
 .app-name-container img {
   max-width: 300px;
@@ -168,14 +175,27 @@ z-index: 1;
   width: 300px;
   height: 380px;
   background-color: #d62c42;
-  color: black;
+  color: rgb(0, 0, 0);
   margin: 0 auto;
   padding: 20px;
+  font-size: 15px;
   border: 3px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 7px 7px 10px red;
-  margin-top: 120px;
-  
+  margin-top: 0vw;
+  background-image: url('./assets/images/loginsignupbooks.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+}
+.loginbold{
+  font-weight: bolder;
+  color: rgb(255, 253, 253)
+}
+.password{
+  font-weight: bolder;
+  color: white;
+}
+.email{
+  font-weight: bolder;
+  color: #ccc;
 }
 
 .Logindiv label {
@@ -200,6 +220,10 @@ z-index: 1;
   cursor: pointer;
   margin-top: 10px;
 }
+.toplogin{
+  color: white;
+  font-size: 30px;
+}
 
 .Logindiv button:hover {
   background-color: #00b36b;
@@ -210,22 +234,34 @@ z-index: 1;
   font-weight: bolder;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border: 2px solid #e0183c;
-  box-shadow: 5px 5px 10px rgb(172, 57, 57);
-  background-image: url(https://img.freepik.com/free-vector/show-dance-floor-vector-background-with-spotlights-party-concert-stage-floor-illustration_1284-42341.jpg?size=626&ext=jpg&ga=GA1.1.993938343.1694652219&semt=ais);
+  box-shadow: 5px 5px 10px rgb(147, 61, 61);
   margin-top: -60px;
 }
 .loginvw{
     border: 100px solid black;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center center; 
-    height: 100vh; 
-    margin-top: -60px;
-    background-image: url(https://img.freepik.com/free-photo/projector-stage-lights_1409-1799.jpg?size=626&ext=jpg&ga=GA1.1.993938343.1694652219&semt=ais);
+    background: black;
+    height: 70vw; 
+    margin-top: -35px;
+    
+}
+.scribeslogo{
+  height: 55px;
+  border-radius: 45%;
+  margin-left: -138px;
+  margin-top: -73px;
+  position: absolute;
+}
+.scribesp{
+  color: white;
+  font-family: cursive;
+  position: absolute;
+  font-size: 55px;
+  margin-top: -87px;
+  margin-left: 100px;
 }
 .signupP{
   font-size: 40px;
-  color: rgb(217, 175, 175);
+  color: rgb(23, 10, 10);
   font-weight: bolder;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-shadow: 5px 5px 10px rgb(0, 0, 0);
