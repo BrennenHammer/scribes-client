@@ -110,9 +110,16 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
 }
+.post img, .post video {
+  /* Ensure media elements fit within the container */
+  max-width: 95%;
+  display: block; /* Prevents inline image alignment issues */
+  margin: 0 auto; /* Center the image or video */
+}
 .add-post-page button{
   margin-top: 80px;
 }
+
 .exit-button {
   position: absolute;
   top: -60px;
@@ -134,14 +141,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  
 }
-
+.feed-container{
+  margin-top: 50px;
+}
 .skills-feed{
 background-color: rgb(10, 7, 7);
 border: 4px solid rgb(139, 42, 42);
 border-radius: 7px;
 z-index: 1;
+}
+.bookfeed{
+  width: 400px;
+  max-height: 60vh;
 }
 
 .videofeed{
@@ -153,12 +165,37 @@ z-index: 1;
   position: fixed;
   font-family: cursive;
   font-size: 25px;
-  left: 65%;
-  color: rgb(211, 37, 66);
+  left: 72%;
+  color: rgb(0, 0, 0);
   top: 22%;
   z-index: -10;
 
 }
+.feedlogop{
+    color: rgb(105, 99, 167);
+    font-size: 40px;
+    position: fixed;
+    top: -10px;
+    left: 200px;
+    font-family: cursive;
+    
+}
+
+.topoffeed{
+  position: fixed;
+  top: 0;
+  left: 120px;
+  width: 100%;
+  height: 80px;
+  background-color: #e7d6d6; /* Change the background color as needed */
+  z-index: 999;
+}
+.topoffeed img{
+  height: 100px;
+  position: fixed;
+  
+}
+
 .feedpara{
   margin-top: -200px;
 }
@@ -272,9 +309,13 @@ margin-top: -40px;
 }
 
 .post {
-  border-radius: 7px;
-  margin-top: 20px;
-  background-color: rgb(176, 119, 119);
+   width: 100%;
+  max-width: 550px; /* Adjust as needed */
+  height: auto; /* Allow the height to adjust based on content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding around the container */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  border: 1px solid #3766a3;
 }
 .postcaption{
   position: relative;
@@ -292,6 +333,7 @@ margin-top: -40px;
   font-size: 15px;
   font-weight: bolder;
   left: 50%;
+  width: 50px;
   transform: translate(-50%, -50%);
   position: relative;
   top: 17px;
@@ -306,18 +348,19 @@ background-color: black;
   border-radius: 50%;
   position: absolute;
   margin-left: -170px;
-  margin-top: 10px;
   
 }
 
 .delete-post-btn {
   position: relative;
   top: 0;
-  right: -40%;
-  background-color: red;  /* or another color of your choice */
+  right: -44%;
+  background-color: rgb(0, 221, 255);  /* or another color of your choice */
   border: none;
   cursor: pointer;
   z-index: 100;
+  height: 30px;
+  width: 10px;
 }
 
 

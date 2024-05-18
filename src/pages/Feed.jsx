@@ -62,6 +62,11 @@ function SkillsFeed() {
   }
 
   return (
+    <div>
+      <div className="topoffeed">
+      <img className="toplogo" src={scribeslogo} alt="Scribes Logo" />
+        <h1 className="feedlogop">Scribes</h1>
+      </div>
     <div className="feed-container">
       <div className="skills-feed">
         {books.map((book) => (
@@ -97,20 +102,21 @@ function SkillsFeed() {
             {checkFormat(book.mediaUrl) ? (
               <video className="videofeed" src={book.mediaUrl} controls />
             ) : (
-              <img src={book.mediaUrl} alt={book.caption} />
+              <img className="bookfeed" src={book.mediaUrl} alt={book.caption} />
             )}
             <p className="postcaption">{book.caption}</p>
           </div>
         ))}
       </div>
       <div className="app-name-container">
-        <img src={scribeslogo} alt=" Logo" />
+        <img  src={scribeslogo} alt=" Logo" />
         <h1 className="feedpara">Scribes</h1>
       </div>
       <footer>
         <p>&copy; 2024 Scribes @</p>
       </footer>
-    </div>
+      </div>
+      </div>
   );
 }
 

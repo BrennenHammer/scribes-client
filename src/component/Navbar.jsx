@@ -28,7 +28,7 @@ const Navbar = () => {
                     <button onClick={logOutUser}>Logout</button>
                     <button onClick={() => setIsAddPostOpen(true)}>Add Story</button>
                     {isAddPostOpen && <AddPost onClose={() => setIsAddPostOpen(false)} />}
-                    <p>Scribes 2023 @</p>
+                    <p>Scribes 2024 @</p>
                 </>
                
             }
