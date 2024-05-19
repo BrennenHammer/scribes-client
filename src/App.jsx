@@ -8,6 +8,7 @@ import Profile from './pages/Profile'
 import Addpost from './pages/Addpost'
 import Subscribers from './pages/Subscribers'
 import UserProfile from "./pages/UserProfile";
+
 function App() {
 
   const getToken = () => {
@@ -22,36 +23,22 @@ function App() {
     return !getToken() ? <Outlet /> : <Navigate to='/' />
   }
 
-
   return (
     <div>
-
       <Navbar className="Navbar1" />
       <Routes>
-       
-     
-
-  <Route element={ <NotLoggedIn /> } >
-
-    <Route path='/login' element={ <Login /> } />
-    <Route path='/signup' element={ <Signup /> } />
-
-  </Route>
-
-  <Route element={<LoggedIn />}>
-    <Route path="/feed" element={<SkillsFeed />} />
-    <Route path='/profile' element={ <Profile /> } />
-    <Route path='/addpost' element={ <Addpost /> } />
-    <Route path='/subscribers' element={ <Subscribers /> } />
-    <Route path="/user-profile/:id" element={ <UserProfile /> }/>
-
-  </Route>
-
-
-</Routes>
-
-
-
+        <Route element={ <NotLoggedIn /> }>
+          <Route path='/login' element={ <Login /> } />
+          <Route path='/signup' element={ <Signup /> } />
+        </Route>
+        <Route element={<LoggedIn />}>
+          <Route path="/feed" element={<SkillsFeed />} />
+          <Route path='/profile' element={ <Profile /> } />
+          <Route path='/addpost' element={ <Addpost /> } />
+          <Route path='/subscribers' element={ <Subscribers /> } />
+          <Route path="/user-profile/:id" element={ <UserProfile /> }/>
+        </Route>
+      </Routes>
     </div>
   )
 }

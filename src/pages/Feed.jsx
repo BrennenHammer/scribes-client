@@ -64,59 +64,60 @@ function SkillsFeed() {
   return (
     <div>
       <div className="topoffeed">
-      <img className="toplogo" src={scribeslogo} alt="Scribes Logo" />
+        <img className="toplogo" src={scribeslogo} alt="Scribes Logo" />
         <h1 className="feedlogop">Scribes</h1>
       </div>
-    <div className="feed-container">
-      <div className="skills-feed">
-        {books.map((book) => (
-          <div key={book._id} className="post">
-            {user && isOwner(book, user._id) && (
-              <button
-                className="delete-post-btn"
-                onClick={() => deleteBook(book._id)}
-              >
-                X
-              </button>
-            )}
-            <div className="post-header">
-              {book.author && (
-                <Link to={`/user-profile/${book.author._id}`}>
-                  <img
-                    className="feedprofilep"
-                    src={book.author.profilePicture}
-                    alt={`${book.author.username}'s profile`}
-                    width="50"
-                    height="50"
-                  />
-                  <h3 className="feedpagename">{book.author.username}</h3>
-                </Link>
+      <div className="feed-container">
+        <div className="skills-feed">
+          {books.map((book) => (
+            <div key={book._id} className="post">
+              {user && isOwner(book, user._id) && (
+                <button
+                  className="delete-post-btn"
+                  onClick={() => deleteBook(book._id)}
+                >
+                  X
+                </button>
               )}
+              <div className="post-header">
+                {book.author && (
+                  <Link to={`/user-profile/${book.author._id}`}>
+                    <img
+                      className="feedprofilep"
+                      src={book.author.profilePicture}
+                      alt={`${book.author.username}'s profile`}
+                      width="50"
+                      height="50"
+                    />
+                    <h3 className="feedpagename">{book.author.username}</h3>
+                  </Link>
+                )}
+              </div>
+              {checkFormat(book.mediaUrl) ? (
+                <video className="videofeed" src={book.mediaUrl} controls />
+              ) : (
+                <img className="bookfeed" src={book.mediaUrl} alt={book.caption} />
+              )}
+              <p className="postcaption">{book.caption}</p>
               <button
                 className="likebutton"
                 onClick={() => handleLike(book._id)}
               >
-                Like ({book.likes.length})
+                ♥
+                {book.likes.length}
               </button>
             </div>
-            {checkFormat(book.mediaUrl) ? (
-              <video className="videofeed" src={book.mediaUrl} controls />
-            ) : (
-              <img className="bookfeed" src={book.mediaUrl} alt={book.caption} />
-            )}
-            <p className="postcaption">{book.caption}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="app-name-container">
+          <img src={scribeslogo} alt=" Logo" />
+          <h1 className="feedpara">Scribes</h1>
+        </div>
+        <footer>
+          <p>&copy; 2024 Scribes</p>
+        </footer>
       </div>
-      <div className="app-name-container">
-        <img  src={scribeslogo} alt=" Logo" />
-        <h1 className="feedpara">Scribes</h1>
-      </div>
-      <footer>
-        <p>&copy; 2024 Scribes @</p>
-      </footer>
-      </div>
-      </div>
+    </div>
   );
 }
 

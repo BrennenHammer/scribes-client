@@ -22,13 +22,13 @@ const Navbar = () => {
 
             {getToken() && 
                 <>
-                    <Link to="/feed">feed</Link>
-                    <Link to="/profile">Profile</Link>
+                    <Link to="/feed">🏠</Link>
+                    <Link to="/profile">👤</Link>
                     <Link to="/subscribers">Subscribers</Link>
                     <button onClick={logOutUser}>Logout</button>
-                    <button onClick={() => setIsAddPostOpen(true)}>Add Story</button>
+                    <button onClick={() => setIsAddPostOpen(true)}>Add Story 📚</button>
                     {isAddPostOpen && <AddPost onClose={() => setIsAddPostOpen(false)} />}
-                    <p>Scribes 2024 @</p>
+                    <p className="navbarscribes">Scribes 2024</p>
                 </>
                
             }
