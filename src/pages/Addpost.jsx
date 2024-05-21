@@ -46,9 +46,9 @@ function AddPost({ onClose }) {
             <div className="backdrop" onClick={onClose}></div>
             <div className="add-post-page">
                 <button className="exit-button" onClick={onClose}>X</button> {/* Add this line for the exit button */}
-                <h2>Add A New Story!</h2>
+                <h2 className='storyp'>Add A New Story!</h2>
                 <form onSubmit={handleSubmit}>
-                    <textarea
+                    <textarea 
                         placeholder="Describe Your Story..."
                         value={description}
                         onChange={e => setDescription(e.target.value)}

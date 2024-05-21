@@ -104,7 +104,7 @@
   left: 50%;
   height: 250px;
   transform: translate(-50%, -50%);
-  background-color: #4e60c4;
+  background-color: #e3e3ea;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -121,11 +121,16 @@
 }
 .add-post-page button{
   margin-top: 80px;
+  color: white;
+  background-color: black;
 }
 
 .navbarscribes{
   color: black;
   margin-top: 270%;
+}
+.storyp{
+  color: #000000;
 }
 
 .exit-button {
@@ -135,14 +140,14 @@
   background-color: #363cf4; /* Red */
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 50%; /* Rounded button */
+  border-radius: 50px; /* Rounded button */
 }
 
 .user-posts {
@@ -155,7 +160,7 @@
 }
 .skills-feed{
 background-color: rgb(10, 7, 7);
-border: 2px solid rgb(81, 81, 181);
+border: 2px solid rgb(162, 162, 167);
 border-radius: 7px;
 z-index: 1;
 }
@@ -180,7 +185,7 @@ z-index: 1;
 
 }
 .feedlogop{
-    color: rgb(90, 82, 174);
+    color: rgb(0, 0, 0);
     font-size: 40px;
     position: fixed;
     top: -10px;
@@ -207,14 +212,17 @@ z-index: 1;
 }
 
 .feedpara{
-  margin-top: -200px;
+  margin-top: -180px;
+  margin-left: 10px
 }
 .app-name-container img {
-  max-width: 300px;
+  max-width: 250px;
+  margin-left: 10px;
   border-radius: 50%;  /* giving some space between the image and the name */
   vertical-align: middle;
     /* aligning the image with the middle of the text */
 }
+
 
 
 
@@ -325,17 +333,24 @@ margin-top: -40px;
   margin: 0 auto; /* Center the container horizontally */
   padding: 10px; /* Add padding around the container */
   box-sizing: border-box; /* Ensure padding is included in width */
-  border: 1px solid #3766a3;
+  
+}
+.signupscribes{
+  color: #fcfeff;
+  margin-top: -85px;
+  margin-left: 105px;
+  font-size: 50px;
+  position: fixed;
+  font-family: cursive;
 }
 .postcaption{
   position: relative;
-  margin-bottom: 5px;
-  top: 50%;
   color: white;
   font-size: 15px;
   font-weight: bolder;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 15px;
 }
 
 .feedpagename{
@@ -343,7 +358,7 @@ margin-top: -40px;
   color: white;
   font-size: 15px;
   font-weight: bolder;
-  left: 43.5%;
+  left: 50%;
   width: 50px;
   transform: translate(-50%, -50%);
   top: 10px;
@@ -360,11 +375,12 @@ background-color: black;
   
 }
 
+
 .delete-post-btn {
   position: relative;
   top: 5px;
   right: -88%;
-  background-color: rgb(58, 92, 97);  /* or another color of your choice */
+  background-color: rgb(85, 133, 141);  /* or another color of your choice */
   border: none;
   display: flex; /* Flexbox to center the "X" */
   align-items: center; /* Center vertically */
@@ -374,8 +390,6 @@ background-color: black;
   height: 20px;
   width: 0px;
 }
-
-
 .likebutton{
 position: relative;
 display: flex; /* Flexbox to center the "X" */

@@ -46,8 +46,10 @@ const Signup = () => {
 
   return (
     <div className="loginvw">
+      <p className="signupscribes">scribes</p>
     <> 
     <div className="Logindiv">
+      
       {message && <p>{message}</p>} {}
 
       <form onSubmit={handleSubmit}>
