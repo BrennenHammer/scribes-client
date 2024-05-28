@@ -60,7 +60,7 @@
   left: 0;
   height: 100%;       
   width: 120px;     
-  background-color: rgb(158, 154, 154);
+  background-color: rgb(227, 211, 211);
   overflow-y: auto;
   z-index: 999;
 }
@@ -78,9 +78,17 @@
   text-decoration: none;
   color: rgb(12, 8, 8);
 }
-.navbar1 button{
-  background-color: rgb(158, 154, 154);
+.logoutb{
+  position: fixed;
+  margin-top: 300px;
+  margin-left: -105px;
+  border: 2px solid #c92b07;
+  color: #bb0000;
 }
+.navbar1 button{
+  background-color: rgb(227, 211, 211);
+}
+
 .navbar1 button:hover{
   background-color: #555;
 }
@@ -189,7 +197,7 @@ z-index: 1;
     font-size: 40px;
     position: fixed;
     top: -10px;
-    left: 240px;
+    left: 220px;
     font-family: cursive;
     
 }
@@ -208,20 +216,10 @@ z-index: 1;
   border-radius: 50%;
   position: absolute;
   top: 15px;
-  left: 65px;
+  left: 40px;
 }
 
-.feedpara{
-  margin-top: -180px;
-  margin-left: 10px
-}
-.app-name-container img {
-  max-width: 250px;
-  margin-left: 10px;
-  border-radius: 50%;  /* giving some space between the image and the name */
-  vertical-align: middle;
-    /* aligning the image with the middle of the text */
-}
+
 
 
 
@@ -333,7 +331,7 @@ margin-top: -40px;
   margin: 0 auto; /* Center the container horizontally */
   padding: 10px; /* Add padding around the container */
   box-sizing: border-box; /* Ensure padding is included in width */
-  
+  border-bottom: 2px solid #ccc;
 }
 .signupscribes{
   color: #fcfeff;
@@ -351,6 +349,7 @@ margin-top: -40px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 15px;
+  max-width: 80%;
 }
 
 .feedpagename{

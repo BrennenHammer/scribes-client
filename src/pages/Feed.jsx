@@ -110,8 +110,6 @@ function SkillsFeed() {
           ))}
         </div>
         <div className="app-name-container">
-          <img src={scribeslogo} alt=" Logo" />
-          <h1 className="feedpara">Scribes</h1>
         </div>
         <footer>
           <p>&copy; 2024 Scribes</p>

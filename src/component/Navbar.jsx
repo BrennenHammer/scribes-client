@@ -25,9 +25,10 @@ const Navbar = () => {
                     <Link to="/feed">🏠</Link>
                     <Link to="/profile">👤</Link>
                     <Link to="/subscribers">Subscribers</Link>
-                    <button onClick={logOutUser}>Logout</button>
                     <button onClick={() => setIsAddPostOpen(true)}>Add Story 📚</button>
                     {isAddPostOpen && <AddPost onClose={() => setIsAddPostOpen(false)} />}
+                    <button className="logoutb" onClick={logOutUser}>Logout</button>
+
                     <p className="navbarscribes">Scribes 2024</p>
                 </>
                
