@@ -58,11 +58,15 @@
   position: fixed;  
   top: 0;
   left: 0;
-  height: 100%;       
-  width: 120px;     
-  background-color: rgb(227, 211, 211);
+  height: 10%;       
+  width: 100%;     
+  background-color: rgb(236, 224, 224);
   overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
+  padding: 0 20px;
 }
 
 .loginlogo{
@@ -80,8 +84,7 @@
 }
 .logoutb{
   position: fixed;
-  margin-top: 300px;
-  margin-left: -105px;
+ margin-left: 390px;
   border: 2px solid #c92b07;
   color: #bb0000;
 }
@@ -218,11 +221,6 @@ z-index: 1;
   top: 15px;
   left: 40px;
 }
-
-
-
-
-
 
 .Logindiv {
   width: 300px;
