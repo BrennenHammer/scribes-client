@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { get } from "../services/authService";
 import axios from "axios";
-import scribeslogo from '../assets/images/scribeslogo.jpg';
 import { AuthContext } from "../context/authContext";
 
 function SkillsFeed() {
@@ -63,10 +62,6 @@ function SkillsFeed() {
 
   return (
     <div>
-      <div className="topoffeed">
-        <img className="toplogo" src={scribeslogo} alt="Scribes Logo" />
-        <h1 className="feedlogop">Scribes</h1>
-      </div>
       <div className="feed-container">
         <div className="skills-feed">
           {books.map((book) => (
