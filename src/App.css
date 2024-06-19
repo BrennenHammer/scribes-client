@@ -1,8 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-} */
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -105,7 +100,6 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  height: 250px;
   transform: translate(-50%, -50%);
   background-color: #e3e3ea;
   padding: 20px;
@@ -114,25 +108,27 @@
   max-width: 500px;
   z-index: 9999;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-
+  display: flex; /* Added to enable side-by-side layout */
+  justify-content: center; /* Center content initially */
+  align-items: center; /* Center content initially */
 }
+
+.add-post-page.side-by-side {
+  justify-content: space-between; /* Adjust layout when image is selected */
+}
+
 .post img, .post video {
-  /* Ensure media elements fit within the container */
   max-width: 95%;
-  display: block; /* Prevents inline image alignment issues */
-  margin: 0 auto; /* Center the image or video */
-}
-.add-post-page button{
-  margin-top: 80px;
-  color: white;
-  background-color: black;
+  display: block;
+  margin: 0 auto;
 }
 
-.navbarscribes{
+.navbarscribes {
   color: black;
   margin-top: 270%;
 }
-.storyp{
+
+.storyp {
   color: #000000;
 }
 
@@ -158,26 +154,30 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.feed-container{
+
+.feed-container {
   margin-top: 50px;
 }
-.skills-feed{
-background-color: rgb(10, 7, 7);
-border: 2px solid rgb(162, 162, 167);
-border-radius: 7px;
-z-index: 1;
+
+.skills-feed {
+  background-color: rgb(10, 7, 7);
+  border: 2px solid rgb(162, 162, 167);
+  border-radius: 7px;
+  z-index: 1;
 }
-.bookfeed{
+
+.bookfeed {
   width: 400px;
   max-height: 60vh;
 }
 
-.videofeed{
+.videofeed {
   height: 400px;
   width: 350px;
   z-index: 1;
 }
-.app-name-container{
+
+.app-name-container {
   position: fixed;
   font-family: cursive;
   font-size: 25px;
@@ -185,21 +185,22 @@ z-index: 1;
   color: rgb(0, 0, 0);
   top: 22%;
   z-index: -10;
-
-}
-.feedlogop{
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-    top: -23px;
-    margin-left: -600px;
-    font-family: cursive;
-    max-width: 10%
 }
 
-.topoffeed{
+.feedlogop {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  top: -23px;
+  margin-left: -600px;
+  font-family: cursive;
+  max-width: 10%;
+}
+
+.topoffeed {
   position: fixed;
   z-index: 999;
 }
+
 .toplogo {
   position: fixed;
   height: 50px;
@@ -223,15 +224,18 @@ z-index: 1;
   background-size: cover;
   background-position: center;
 }
-.loginbold{
+
+.loginbold {
   font-weight: bolder;
-  color: rgb(255, 253, 253)
+  color: rgb(255, 253, 253);
 }
-.password{
+
+.password {
   font-weight: bolder;
   color: white;
 }
-.email{
+
+.email {
   font-weight: bolder;
   color: #ccc;
 }
@@ -258,7 +262,8 @@ z-index: 1;
   cursor: pointer;
   margin-top: 10px;
 }
-.toplogin{
+
+.toplogin {
   color: white;
   font-size: 30px;
 }
@@ -266,30 +271,33 @@ z-index: 1;
 .Logindiv button:hover {
   background-color: #00b36b;
 }
-.loginp{
+
+.loginp {
   font-size: 40px;
   color: black;
   font-weight: bolder;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border: 2px solid #e0183c;
   box-shadow: 5px 5px 10px rgb(147, 61, 61);
   margin-top: -60px;
 }
-.loginvw{
-    border: 100px solid black;
-    background: black;
-    height: 70vw; 
-    margin-top: -35px;
-    
+
+.loginvw {
+  border: 100px solid black;
+  background: black;
+  height: 70vw;
+  margin-top: -35px;
 }
-.scribeslogo{
+
+.scribeslogo {
   height: 55px;
   border-radius: 45%;
   margin-left: -138px;
   margin-top: -73px;
   position: absolute;
 }
-.scribesp{
+
+.scribesp {
   color: white;
   font-family: cursive;
   position: absolute;
@@ -297,20 +305,22 @@ z-index: 1;
   margin-top: -87px;
   margin-left: 100px;
 }
-.signupP{
+
+.signupP {
   font-size: 40px;
   color: rgb(23, 10, 10);
   font-weight: bolder;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-shadow: 5px 5px 10px rgb(0, 0, 0);
   margin-top: -60px;
 }
-.loginp img{
-margin-top: -40px;
+
+.loginp img {
+  margin-top: -40px;
 }
 
 .post {
-   width: 100%;
+  width: 100%;
   max-width: 550px; /* Adjust as needed */
   height: auto; /* Allow the height to adjust based on content */
   margin: 0 auto; /* Center the container horizontally */
@@ -318,7 +328,8 @@ margin-top: -40px;
   box-sizing: border-box; /* Ensure padding is included in width */
   border-bottom: 2px solid #ccc;
 }
-.signupscribes{
+
+.signupscribes {
   color: #fcfeff;
   margin-top: -85px;
   margin-left: 105px;
@@ -326,7 +337,8 @@ margin-top: -40px;
   position: fixed;
   font-family: cursive;
 }
-.postcaption{
+
+.postcaption {
   position: relative;
   color: white;
   font-size: 15px;
@@ -337,7 +349,7 @@ margin-top: -40px;
   max-width: 80%;
 }
 
-.feedpagename{
+.feedpagename {
   position: relative;
   color: white;
   font-size: 15px;
@@ -347,40 +359,76 @@ margin-top: -40px;
   transform: translate(-50%, -50%);
   top: 10px;
 }
-.feedpagename:hover{
-background-color: black;
-}
-.profilep{
-  border-radius: 50%;
-  
-}
-.feedprofilep{
-  border-radius: 50%;
-  
+
+.feedpagename:hover {
+  background-color: black;
 }
 
+.profilep {
+  border-radius: 50%;
+}
+
+.feedprofilep {
+  border-radius: 50%;
+}
 
 .delete-post-btn {
   position: relative;
   top: 5px;
   right: -88%;
-  background-color: rgb(85, 133, 141);  /* or another color of your choice */
+  background-color: rgb(85, 133, 141); /* or another color of your choice */
   border: none;
   display: flex; /* Flexbox to center the "X" */
   align-items: center; /* Center vertically */
-  justify-content: center; 
+  justify-content: center;
   cursor: pointer;
   z-index: 100;
   height: 20px;
   width: 0px;
 }
-.likebutton{
-position: relative;
-display: flex; /* Flexbox to center the "X" */
-align-items: center; /* Center vertically */
-justify-content: center;
-top: -20px;
-height: 30px;
-width: 50px;
-padding: 5px 0;
+
+.likebutton {
+  position: relative;
+  display: flex; /* Flexbox to center the "X" */
+  align-items: center; /* Center vertically */
+  justify-content: center;
+  top: -20px;
+  height: 30px;
+  width: 50px;
+  padding: 5px 0;
+}
+
+/* New styles for the AddPost page image preview */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.add-post-page button {
+  margin-top: 10px;
+  color: white;
+  background-color: black;
 }
