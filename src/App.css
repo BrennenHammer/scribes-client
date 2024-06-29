@@ -69,6 +69,7 @@
   padding: 10px 15px;
   text-decoration: none;
   color: rgb(12, 8, 8);
+  
 }
 .logoutb{
   position: fixed;
@@ -77,13 +78,16 @@
 }
 .navbar1 button{
   background-color: white;
+  
 }
 
 .navbar1 button:hover{
   background-color: #555;
+  border-radius: 4px;
 }
 .navbar1 a:hover {
   background-color: #555;
+  border-radius: 4px;
 }
 
 .backdrop {
@@ -109,13 +113,13 @@
   max-width: 500px;
   z-index: 9999;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  display: flex; /* Added to enable side-by-side layout */
-  justify-content: center; /* Center content initially */
-  align-items: center; /* Center content initially */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-post-page.side-by-side {
-  justify-content: space-between; /* Adjust layout when image is selected */
+  justify-content: space-between;
 }
 
 .post img, .post video {
@@ -429,7 +433,6 @@ form {
 }
 
 .add-post-page button {
-  margin-top: 10px;
   color: black;
   background-color: white;
   border: 1px solid black;
