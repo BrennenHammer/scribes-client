@@ -2,9 +2,12 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: rgb(242, 236, 236);
   text-align: center;
 }
-
+body{
+  background-color: #e9dfdf;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
