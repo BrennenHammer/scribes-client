@@ -10,7 +10,7 @@ body{
 }
 .logo {
   height: 6.1em;
-  padding: 1.4em;
+  padding: 1.6em;
   will-change: filter;
   transition: filter 300ms;
 }
